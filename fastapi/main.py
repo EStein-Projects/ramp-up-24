@@ -2,6 +2,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/")
-async def helloWorld(name=input("Enter your name: ")):
+@app.get("/name/{name}")
+async def helloWorld(name: str):
     return f"Hello, {name}"
