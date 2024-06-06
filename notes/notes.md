@@ -9,10 +9,12 @@
 4. Wsl settings, such as the default launch profile, can be accessed from any dir with:
      `sudo nano /etc/wsl.conf`
    This will open the file, and to change/create the default launch user, write:
-     ```...\<preexisting code\>...
+     ```
+     ...\<preexisting code\>...
 
      \[user\]
      default=\<username\>
 
-   ```...Ad Can..., the blank lines might be meakev, so write them
+   ```
+   ...Ad Can..., the blank lines might be meakev, so write them
 5.
