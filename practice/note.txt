@@ -1,0 +1,2 @@
+These programs print to the command line when called.
+These programs are not consistent in their UI regarding bad input as I was experimenting with different ways to handle bad input.
