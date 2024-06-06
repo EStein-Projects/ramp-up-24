@@ -8,7 +8,7 @@ def even_tester(n):
             print("Integer is even.")
         else:
             print("Integer is odd.")
-    except ValueError:
+    except (ValueError or TypeError):
         print("Invalid input. Please enter a valid integer.")
 
 if __name__ == '__main__':
