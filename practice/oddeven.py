@@ -1,14 +1,15 @@
 def even_tester(n):
-    if not type(n) == int:
-        print("Invalid Input")
-    elif n%2 == 0:
-        print("Integer is even")
-    else:
-        print("Integer is odd")
+    integer = 0
+    try:
+        integer = int(n)
+        if isinstance(n, float):
+            print("Invalid input. Please enter a valid integer.")
+        elif integer%2 == 0:
+            print("Integer is even.")
+        else:
+            print("Integer is odd.")
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
 
-num = input("Enter an integer: ")
-try:
-    num = int(num)
-    even_tester(num)
-except ValueError:
-    print("Invalid Input")
+if __name__ == '__main__':
+    even_tester(input("Enter an integer: "))
