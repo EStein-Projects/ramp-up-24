@@ -9,7 +9,9 @@ def str_reverser(s):
             r += c
             if c in vowels:
                 v_count += 1
-        print(f"The string reversed is \"{r}\" and the number of vowels in it is {v_count}.")
+        return [r, v_count]
+        
 
 if __name__ == '__main__':
-    str_reverser(input("Enter a string: "))
+    data = str_reverser(input("Enter a string: "))
+    print(f"The string reversed is \"{data[0]}\" and the number of vowels it contained is {data[1]}.")
