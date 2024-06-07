@@ -17,4 +17,5 @@
 
    ```
    ...Ad Can..., the blank lines might be meakev, so write them
-5.
+5. Unlike java, python code executes top to bottom bec python isnt compiled b4 running
+6. 
