@@ -1,0 +1,33 @@
+services:
+  redis:
+    image: # redis-latest as of July 2024
+      9c893be668ac8f0304740d6373e6939032016ad390e62f87ed2a9cabc4da13ef
+    networks:
+      - redis-net
+  publisher:
+    build:
+      context: .
+      dockerfile: Dockerfile.publish
+    networks:
+      - redis-net
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+    ports:
+      - "8000:8000"
+  subscriber:
+    build:
+      context: .
+      dockerfile: Dockerfile.subscribe
+    networks:
+      - redis-net
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+
+networks:
+  redis-net:
+    driver: bridge
+    # external: true
